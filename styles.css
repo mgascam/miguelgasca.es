@@ -1,0 +1,203 @@
+:root {
+    --primary: #2563eb;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --bg: #ffffff;
+    --bg-alt: #f9fafb;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg-alt);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+header {
+    padding: 3rem 2rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.summary {
+    color: var(--text);
+}
+
+.skills-grid {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    font-size: 0.95rem;
+}
+
+.skill-label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.skill-value {
+    color: var(--text-light);
+}
+
+.job {
+    margin-bottom: 1.5rem;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.job-company {
+    color: var(--primary);
+}
+
+.job-date {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.job ul {
+    margin-left: 1.25rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.job li {
+    margin-bottom: 0.25rem;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.education-school {
+    font-weight: 600;
+}
+
+.education-degree {
+    color: var(--text-light);
+}
+
+.education-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: none;
+    }
+}
