@@ -198,6 +198,10 @@ footer {
     color: var(--text-light);
 }
 
+footer p {
+    margin: 0 auto;
+}
+
 @media (max-width: 600px) {
     header {
         padding: 2rem 1.5rem 1.5rem;
